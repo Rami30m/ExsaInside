@@ -1,0 +1,21 @@
+# Исключить виртуальную среду
+venv/
+backend/venv/
+
+# Исключить временные и кеш файлы
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+
+# Исключить модели и большие файлы (если не нужны)
+*.pkl
+*.csv
+*.json
+
+# Node.js
+node_modules/
+.next/
+dist/
