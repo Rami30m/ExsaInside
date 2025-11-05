@@ -1,0 +1,17 @@
+# 1️⃣ Базовый образ Node.js
+FROM node:20-alpine AS frontend
+
+WORKDIR /app
+
+# 2️⃣ Устанавливаем зависимости
+COPY frontend/package*.json ./
+RUN npm install
+
+# 3️⃣ Копируем код
+COPY frontend/ .
+
+# 4️⃣ Сборка проекта
+RUN npm run build
+
+# 5️⃣ Запуск сервера Next.js
+CMD ["npm", "start"]
