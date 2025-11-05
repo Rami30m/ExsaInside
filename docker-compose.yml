@@ -1,4 +1,4 @@
-version: "3.9"
+# version: "3.9"
 
 services:
   backend:
@@ -7,7 +7,7 @@ services:
       dockerfile: backend/Dockerfile
     container_name: kepler-backend
     ports:
-      - "8000:8000"
+      - "8002:8000"
     volumes:
       - ./backend:/app
     environment:
